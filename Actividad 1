@@ -1,0 +1,68 @@
+# Ayeli Yaramit Suarez Soria, 952
+# 15 de agosto de 2023
+
+
+#Ejercicio 1
+nums = [1, 2, 3, 1]
+
+def duplicados(nums):
+    seen = set()
+    for num in nums:
+        if num in seen:
+            return True
+        seen.add(num)
+    return False
+print(duplicados(nums))
+
+
+#Ejericio 2
+lista = [2, 7, 11, 15]
+target = 9
+
+def suma(lista, target):
+    dicc = {}
+    for i, num in enumerate(lista):
+        n = target - num
+        if n not in dicc:
+            dicc[num] = i
+        else:
+            return [dicc[n], i]
+print(suma(lista, target))
+
+#Ejercicio 3
+
+clave = 'ixmrklstnuzbowfaqejdcpvhyg'
+mensaje = "cafe"
+alfabeto = 'abcdefghijklmnopqrstuvwxyz'
+
+def encripta(s, clave, alfabeto):
+    x = str.maketrans(alfabeto, clave)
+    codificado = s.translate(x)
+    return codificado
+
+codificado = encripta(mensaje, clave, alfabeto)
+print(codificado)
+
+# Ejercicio 4
+mensaje2 = 'riok 1 mtfmfbidk'
+
+def desencriptar(alfabeto, clave, s):
+    y = str.maketrans(clave, alfabeto)
+    descodificado = s.translate(y)
+    return descodificado
+
+descodificado = desencriptar(alfabeto, clave, mensaje2)
+print(descodificado)
+
+#def estadistica(ListaNumeros):
+#    frecuencia = {}
+#    for m in (ListaNumeros):
+#        if m in frecuencia:
+#            frecuencia[m] += 1
+#        else:
+#            frecuencia[m] = 0
+#        return frecuencia
+#print(estadistica(ListaNumeros))
+
+# Ejercicio 6
+
