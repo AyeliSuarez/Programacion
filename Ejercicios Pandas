@@ -1,0 +1,14 @@
+import pandas as pd
+
+datos = {
+    "nombre": ["Maria", "Luis", " Carmen"],
+    "materias" : ["Matematicas", "Programacion", "Mercadotecnia"],
+    "Promedios" : [80,90,100]
+}
+df_alumnos = pd.DataFrame(datos)
+print(df_alumnos)
+
+# df_colesterol = pd.read_csv()
+# print(df_colesterol.head()) # Primeros 5
+# print(df_colesterol.sample()) # 5 datos aleatorios
+# print(df_colesterol.index) # Fechas
